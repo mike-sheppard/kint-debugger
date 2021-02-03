@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f52062ac5fea2d0315715e7074173f5f",
+    "content-hash": "084863eaa3bef4f78e86a6d2759cea8c",
     "packages": [
         {
             "name": "kint-php/kint",
