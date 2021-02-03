@@ -1,5 +1,5 @@
 {
-    "name": "akandco/kint-debugger",
+    "name": "mike-sheppard/kint-debugger",
     "description": "Simple WP Plugin wrapper for Kint php debugger",
     "type": "wordpress-plugin",
     "require": {
