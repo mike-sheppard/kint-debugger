@@ -1,0 +1,16 @@
+{
+    "name": "akandco/kint-debugger",
+    "description": "Simple WP Plugin wrapper for Kint php debugger",
+    "type": "wordpress-plugin",
+    "require": {
+        "kint-php/kint-twig": "dev-master"
+    },
+    "license": "gpl",
+    "authors": [
+        {
+            "name": "Mike Sheppard",
+            "email": "mike@slowrush.co.uk"
+        }
+    ],
+    "minimum-stability": "dev"
+}
