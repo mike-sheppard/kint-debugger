@@ -26,9 +26,8 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
-
-add_action('plugins_loaded', function() {
-	require_once(__DIR__ . '/vendor/autoload.php');
+add_action('plugins_loaded', function () {
+    require_once (__DIR__ . '/vendor/autoload.php');
 });
 
 /**
@@ -97,8 +96,8 @@ if (!defined('KINT_TO_DEBUG_BAR') || KINT_TO_DEBUG_BAR) {
         function d()
         {
             /** @noinspection PhpUndefinedClassInspection */
-            if (!Kint::enabled()) {
-                return '';
+            if (!class_exists('Kint')) {
+                return;
             }
             $_ = func_get_args();
             if (class_exists('Debug_Bar')) {
@@ -139,15 +138,12 @@ function kint_debug_ob($buffer)
  *
  * @return array
  */
-function kint_debug_bar_panel($panels)
-{
-
+add_filter('debug_bar_panels', function($panels) {
     if (!class_exists('Kint_Debug_Bar_Panel')) {
-        require_once 'includes/class-kint-debug-bar-panel.php';
+        require_once __DIR__ . '/includes/class-kint-debug-bar-panel.php';
     }
 
     $panels[] = new Kint_Debug_Bar_Panel;
 
     return $panels;
-}
-add_filter('debug_bar_panels', 'kint_debug_bar_panel');
+});
