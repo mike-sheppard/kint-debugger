@@ -12,5 +12,9 @@
             "email": "mike@slowrush.co.uk"
         }
     ],
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist"
+    }
 }
